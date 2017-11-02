@@ -1,0 +1,10 @@
+C:\Users\Eduardo\source\repos\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\bin\Debug\MaquinaTurinAreaCubo.exe.config
+C:\Users\Eduardo\source\repos\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\bin\Debug\MaquinaTurinAreaCubo.exe
+C:\Users\Eduardo\source\repos\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\bin\Debug\MaquinaTurinAreaCubo.pdb
+C:\Users\Eduardo\source\repos\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.csprojResolveAssemblyReference.cache
+C:\Users\Eduardo\source\repos\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.Form1.resources
+C:\Users\Eduardo\source\repos\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.Properties.Resources.resources
+C:\Users\Eduardo\source\repos\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.csproj.GenerateResource.Cache
+C:\Users\Eduardo\source\repos\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.csproj.CoreCompileInputs.cache
+C:\Users\Eduardo\source\repos\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.exe
+C:\Users\Eduardo\source\repos\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.pdb
