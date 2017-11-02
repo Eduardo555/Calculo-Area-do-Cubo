@@ -2,7 +2,7 @@
 	
 Projeto desenvolvido com objetivo de desenvolver uma logica e posteriormente uma implementação, de uma maquina de turing capaz de calcular a area de um cubo, utilizando os conceitos matematicos.
 
-#Conceitos Matematicos
+# Conceitos Matematicos
 
 	At = 6.L²
 	
@@ -10,7 +10,7 @@ Projeto desenvolvido com objetivo de desenvolver uma logica e posteriormente uma
 	Onde 6 = Constante referente a quantidade de faces.
 	Onde L² = Referente as bases do cubo.
 
-#Tecnologias Utilizadas
+# Tecnologias Utilizadas
 
 	 - C#
 	 - Windws Form
