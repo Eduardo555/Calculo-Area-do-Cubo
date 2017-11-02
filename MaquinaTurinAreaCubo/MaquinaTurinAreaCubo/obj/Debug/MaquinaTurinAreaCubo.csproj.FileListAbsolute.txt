@@ -18,3 +18,4 @@ C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\Maqu
 C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.csproj.CoreCompileInputs.cache
 C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.exe
 C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.pdb
+C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.Arestas.frmTamanhoArestas.resources

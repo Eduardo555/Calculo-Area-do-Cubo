@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaquinaTurinAreaCubo.Arestas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,5 +27,15 @@ namespace MaquinaTurinAreaCubo
         {
 
         }
+
+        #region --- Botoes ---
+
+        private void btnTamanhoArestas_Click(object sender, EventArgs e)
+        {
+            frmTamanhoArestas frTamanhoArestas = new frmTamanhoArestas();
+            frTamanhoArestas.ShowDialog();
+        }
+
+        #endregion
     }
 }

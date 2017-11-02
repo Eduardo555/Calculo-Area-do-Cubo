@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTamanhoArestas = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ESTADOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SIMBOLO_INICIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +65,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnTamanhoArestas);
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
@@ -73,14 +73,15 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button1
+            // btnTamanhoArestas
             // 
-            this.button1.Location = new System.Drawing.Point(12, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 78);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Informar Tamanho das Aresta";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnTamanhoArestas.Location = new System.Drawing.Point(12, 18);
+            this.btnTamanhoArestas.Name = "btnTamanhoArestas";
+            this.btnTamanhoArestas.Size = new System.Drawing.Size(162, 78);
+            this.btnTamanhoArestas.TabIndex = 0;
+            this.btnTamanhoArestas.Text = "Informar Tamanho das Aresta";
+            this.btnTamanhoArestas.UseVisualStyleBackColor = true;
+            this.btnTamanhoArestas.Click += new System.EventHandler(this.btnTamanhoArestas_Click);
             // 
             // dataGridView1
             // 
@@ -186,18 +187,18 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(227, 6);
             // 
             // executarMaquinaToolStripMenuItem
             // 
             this.executarMaquinaToolStripMenuItem.Name = "executarMaquinaToolStripMenuItem";
-            this.executarMaquinaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.executarMaquinaToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.executarMaquinaToolStripMenuItem.Text = "Executar";
             // 
             // pararToolStripMenuItem
             // 
             this.pararToolStripMenuItem.Name = "pararToolStripMenuItem";
-            this.pararToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pararToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.pararToolStripMenuItem.Text = "Parar";
             // 
             // fitaDeExecuçãoToolStripMenuItem
@@ -252,7 +253,7 @@
             // reiniciarToolStripMenuItem
             // 
             this.reiniciarToolStripMenuItem.Name = "reiniciarToolStripMenuItem";
-            this.reiniciarToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.reiniciarToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.reiniciarToolStripMenuItem.Text = "Reiniciar";
             // 
             // button2
@@ -301,7 +302,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTamanhoArestas;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTADOS;
         private System.Windows.Forms.DataGridViewTextBoxColumn SIMBOLO_INICIAL;

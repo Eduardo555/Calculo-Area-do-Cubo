@@ -45,14 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arestas\frmTamanhoArestas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Arestas\frmTamanhoArestas.Designer.cs">
+      <DependentUpon>frmTamanhoArestas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTelaPrincipal.Designer.cs">
       <DependentUpon>frmTelaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaquinaTuring\clnFita.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Arestas\frmTamanhoArestas.resx">
+      <DependentUpon>frmTamanhoArestas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTelaPrincipal.resx">
       <DependentUpon>frmTelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
