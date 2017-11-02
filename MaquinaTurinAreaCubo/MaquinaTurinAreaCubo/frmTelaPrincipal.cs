@@ -16,5 +16,15 @@ namespace MaquinaTurinAreaCubo
         {
             InitializeComponent();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void visualizarFitaOriginalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

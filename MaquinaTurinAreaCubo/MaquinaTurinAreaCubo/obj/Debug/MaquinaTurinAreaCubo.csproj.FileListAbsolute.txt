@@ -8,3 +8,13 @@ C:\Users\Eduardo\source\repos\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debu
 C:\Users\Eduardo\source\repos\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.csproj.CoreCompileInputs.cache
 C:\Users\Eduardo\source\repos\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.exe
 C:\Users\Eduardo\source\repos\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.pdb
+C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\bin\Debug\MaquinaTurinAreaCubo.exe.config
+C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\bin\Debug\MaquinaTurinAreaCubo.exe
+C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\bin\Debug\MaquinaTurinAreaCubo.pdb
+C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.csprojResolveAssemblyReference.cache
+C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.frmTelaPrincipal.resources
+C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.Properties.Resources.resources
+C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.csproj.GenerateResource.Cache
+C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.csproj.CoreCompileInputs.cache
+C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.exe
+C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.pdb
