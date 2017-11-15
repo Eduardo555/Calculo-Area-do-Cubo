@@ -29,14 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnTamanhoArestas = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ESTADOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SIMBOLO_INICIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SIMBOLO_X = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SIMBOLO_VAZIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VARIAVEL_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VARIAVEL_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,16 +41,21 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.executarMaquinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pararToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reiniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fitaDeExecuçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visualizarFitaInicialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabelaDeEstadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reiniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ESTADOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SIMBOLO_INICIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SIMBOLO_X = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SIMBOLO_VAZIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VARIAVEL_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VARIAVEL_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -72,6 +72,15 @@
             this.panel1.Size = new System.Drawing.Size(188, 711);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(12, 102);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(162, 78);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Executar Máquina";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // btnTamanhoArestas
             // 
@@ -97,36 +106,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1136, 261);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // ESTADOS
-            // 
-            this.ESTADOS.HeaderText = "Estados";
-            this.ESTADOS.Name = "ESTADOS";
-            // 
-            // SIMBOLO_INICIAL
-            // 
-            this.SIMBOLO_INICIAL.HeaderText = "->";
-            this.SIMBOLO_INICIAL.Name = "SIMBOLO_INICIAL";
-            // 
-            // SIMBOLO_X
-            // 
-            this.SIMBOLO_X.HeaderText = "X";
-            this.SIMBOLO_X.Name = "SIMBOLO_X";
-            // 
-            // SIMBOLO_VAZIO
-            // 
-            this.SIMBOLO_VAZIO.HeaderText = "-";
-            this.SIMBOLO_VAZIO.Name = "SIMBOLO_VAZIO";
-            // 
-            // VARIAVEL_A
-            // 
-            this.VARIAVEL_A.HeaderText = "A";
-            this.VARIAVEL_A.Name = "VARIAVEL_A";
-            // 
-            // VARIAVEL_B
-            // 
-            this.VARIAVEL_B.HeaderText = "B";
-            this.VARIAVEL_B.Name = "VARIAVEL_B";
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -201,6 +181,12 @@
             this.pararToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.pararToolStripMenuItem.Text = "Parar";
             // 
+            // reiniciarToolStripMenuItem
+            // 
+            this.reiniciarToolStripMenuItem.Name = "reiniciarToolStripMenuItem";
+            this.reiniciarToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.reiniciarToolStripMenuItem.Text = "Reiniciar";
+            // 
             // fitaDeExecuçãoToolStripMenuItem
             // 
             this.fitaDeExecuçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -222,20 +208,6 @@
             this.visualizarFitaInicialToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.visualizarFitaInicialToolStripMenuItem.Text = "Visualizar Fita Inicial";
             // 
-            // ajudaToolStripMenuItem
-            // 
-            this.ajudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sobreToolStripMenuItem});
-            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
-            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.ajudaToolStripMenuItem.Text = "Ajuda";
-            // 
-            // sobreToolStripMenuItem
-            // 
-            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.sobreToolStripMenuItem.Text = "Sobre";
-            // 
             // tabelaDeEstadosToolStripMenuItem
             // 
             this.tabelaDeEstadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -250,20 +222,19 @@
             this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.visualizarToolStripMenuItem.Text = "Visualizar";
             // 
-            // reiniciarToolStripMenuItem
+            // ajudaToolStripMenuItem
             // 
-            this.reiniciarToolStripMenuItem.Name = "reiniciarToolStripMenuItem";
-            this.reiniciarToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
-            this.reiniciarToolStripMenuItem.Text = "Reiniciar";
+            this.ajudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sobreToolStripMenuItem});
+            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
+            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.ajudaToolStripMenuItem.Text = "Ajuda";
             // 
-            // button2
+            // sobreToolStripMenuItem
             // 
-            this.button2.Location = new System.Drawing.Point(12, 102);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(162, 78);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Executar Máquina";
-            this.button2.UseVisualStyleBackColor = true;
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sobreToolStripMenuItem.Text = "Sobre";
             // 
             // groupBox1
             // 
@@ -273,6 +244,42 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Visualização | Execução da Maquina";
+            // 
+            // ESTADOS
+            // 
+            this.ESTADOS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ESTADOS.HeaderText = "Estados";
+            this.ESTADOS.Name = "ESTADOS";
+            // 
+            // SIMBOLO_INICIAL
+            // 
+            this.SIMBOLO_INICIAL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SIMBOLO_INICIAL.HeaderText = "->";
+            this.SIMBOLO_INICIAL.Name = "SIMBOLO_INICIAL";
+            // 
+            // SIMBOLO_X
+            // 
+            this.SIMBOLO_X.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SIMBOLO_X.HeaderText = "X";
+            this.SIMBOLO_X.Name = "SIMBOLO_X";
+            // 
+            // SIMBOLO_VAZIO
+            // 
+            this.SIMBOLO_VAZIO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SIMBOLO_VAZIO.HeaderText = "-";
+            this.SIMBOLO_VAZIO.Name = "SIMBOLO_VAZIO";
+            // 
+            // VARIAVEL_A
+            // 
+            this.VARIAVEL_A.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.VARIAVEL_A.HeaderText = "A";
+            this.VARIAVEL_A.Name = "VARIAVEL_A";
+            // 
+            // VARIAVEL_B
+            // 
+            this.VARIAVEL_B.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.VARIAVEL_B.HeaderText = "B";
+            this.VARIAVEL_B.Name = "VARIAVEL_B";
             // 
             // frmTelaPrincipal
             // 
@@ -290,6 +297,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maquina de Turing - Area Cubo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmTelaPrincipal_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -304,12 +312,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnTamanhoArestas;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ESTADOS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SIMBOLO_INICIAL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SIMBOLO_X;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SIMBOLO_VAZIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VARIAVEL_A;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VARIAVEL_B;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
@@ -329,6 +331,12 @@
         private System.Windows.Forms.ToolStripMenuItem tabelaDeEstadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualizarToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ESTADOS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SIMBOLO_INICIAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SIMBOLO_X;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SIMBOLO_VAZIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VARIAVEL_A;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VARIAVEL_B;
     }
 }
 
