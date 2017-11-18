@@ -1,4 +1,4 @@
-﻿using MaquinaTurinAreaCubo.Arestas;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,8 +32,8 @@ namespace MaquinaTurinAreaCubo
 
         private void btnTamanhoArestas_Click(object sender, EventArgs e)
         {
-            frmTamanhoArestas frTamanhoArestas = new frmTamanhoArestas();
-            frTamanhoArestas.ShowDialog();
+
+         
         }
 
         #endregion
@@ -45,25 +45,170 @@ namespace MaquinaTurinAreaCubo
 
         private void frmTelaPrincipal_Load(object sender, EventArgs e)
         {
-            dataGridView1.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridView1.Rows.Add(">", "D,>,0", "", "", "", "");
-            this.dataGridView1.Rows.Add("0","", "D,X,0","D,A,1","","");
-            this.dataGridView1.Rows.Add("1","", "D,B,2", "", "", "");
-            this.dataGridView1.Rows.Add("2", "", "D,X,2", "E,B,3", "", "D,B,2");
-            this.dataGridView1.Rows.Add("3", "", "E,X,3", "", "", "D,B,4");
-            this.dataGridView1.Rows.Add("4", "", "D,B,5", "", "", "");
-            this.dataGridView1.Rows.Add("5", "", "D,X,5", "E,B,6", "", "D,B,5");
-            this.dataGridView1.Rows.Add("6", "", "E,X,3", "", "D,A,7", "E,B,6");
-            this.dataGridView1.Rows.Add("7", "D,>,8", "", "E,X,7", "E,A,7", "D,X,7");
-            this.dataGridView1.Rows.Add("8", "", "D,_,9", "D,_,16", "", "");
-            this.dataGridView1.Rows.Add("9", "", "D,X,9", "D,_,10", "", "");
-            this.dataGridView1.Rows.Add("10", "", "D,A,11", "E,_,14", "", "");
-            this.dataGridView1.Rows.Add("11", "", "D,X,11", "D,_,12", "", "");
-            this.dataGridView1.Rows.Add("12", "", "D,X,12", "E,X,13", "", "");
-            this.dataGridView1.Rows.Add("13", "", "E,X,13", "E,_,13", "D,A,10", "");
-            this.dataGridView1.Rows.Add("14", "", "", "E,_,15", "E,X,14", "");
-            this.dataGridView1.Rows.Add("15", "", "E,X,15", "D,_,8", "", "");
-            this.dataGridView1.Rows.Add("16", "", "D,_,16", "FIM", "", "");
+            tabelamaquina.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+          //  this.dataGridView1.Rows.Add(">", "", "", "", "", "");
+            tabelamaquina.Rows.Add("0", "D,>,0", "D,X,0","D,A,1","","");
+            tabelamaquina.Rows.Add("1","", "D,B,2", "", "", "");
+            tabelamaquina.Rows.Add("2", "", "D,X,2", "E,B,3", "", "D,B,2");
+            tabelamaquina.Rows.Add("3", "", "E,X,3", "", "", "D,B,4");
+            tabelamaquina.Rows.Add("4", "", "D,B,5", "", "", "");
+            tabelamaquina.Rows.Add("5", "", "D,X,5", "E,B,6", "", "D,B,5");
+            tabelamaquina.Rows.Add("6", "", "E,X,3", "", "D,A,7", "E,B,6");
+            tabelamaquina.Rows.Add("7", "D,>,8", "E,X,7", "E,_,7", "E,_,7", "D,X,7");
+            tabelamaquina.Rows.Add("8", "", "D,_,9", "D,_,16", "", "");
+            tabelamaquina.Rows.Add("9", "", "D,X,9", "D,_,10", "", "");
+            tabelamaquina.Rows.Add("10", "", "D,A,11", "E,_,14", "", "");
+            tabelamaquina.Rows.Add("11", "", "D,X,11", "D,_,12", "", "");
+            tabelamaquina.Rows.Add("12", "", "D,X,12", "E,X,13", "", "");
+            tabelamaquina.Rows.Add("13", "", "E,X,13", "E,_,13", "D,A,10", "");
+            tabelamaquina.Rows.Add("14", "", "", "E,_,15", "E,X,14", "");
+            tabelamaquina.Rows.Add("15", "", "E,X,15", "D,_,8", "", "");
+            tabelamaquina.Rows.Add("16", "", "D,_,16", "0,0,0", "", "");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Digite um numero", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Convert.ToInt32(textBox1.Text) <= 1)
+            {
+
+                MessageBox.Show("Digite um numero maior que 1", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            string valor = ">XXXXXX_";
+            for (int i = 0; i < Convert.ToInt32(textBox1.Text); i++)
+            {
+                valor = valor + "X";
+            }
+            txtfita.Text = valor + "_";
+
+            String linhaatual= "0"; //estado
+            Int32 colunaatual= 1;
+            Int32 posicao = 0;
+
+
+            String fita = txtfita.Text;
+            String dadoatual="";
+          //  Char valor;
+            tabelamaquina.CurrentCell = tabelamaquina[colunaatual, Convert.ToInt32(linhaatual)];
+
+            while (dadoatual != "0,0,0")
+                {
+
+            dadoatual = Convert.ToString(tabelamaquina.CurrentCell.Value);
+
+        
+            if (Convert.ToString(dadoatual[2]) == ">")
+            {
+           
+                StringBuilder editarfita = new StringBuilder(fita);
+                editarfita[posicao] = '>';
+                fita = Convert.ToString(editarfita);
+                txtfita.Text = fita;
+ 
+            }
+            if (Convert.ToString(dadoatual[2]) == "A")
+            {
+                
+                StringBuilder editarfita = new StringBuilder(fita);
+                editarfita[posicao] = 'A';
+                fita = Convert.ToString(editarfita);
+                txtfita.Text = fita;
+            }
+            if (Convert.ToString(dadoatual[2]) == "B")
+            {
+                 
+                StringBuilder editarfita = new StringBuilder(fita);
+                editarfita[posicao] = 'B';
+                fita = Convert.ToString(editarfita);
+                txtfita.Text = fita;
+            }
+            if (Convert.ToString(dadoatual[2]) == "_" )
+                {
+               
+                StringBuilder editarfita = new StringBuilder(fita);
+                editarfita[posicao] = '_';
+                fita = Convert.ToString(editarfita);
+                txtfita.Text = fita;
+            }
+            if (Convert.ToString(dadoatual[2]) == "X")
+            {
+               
+                StringBuilder editarfita = new StringBuilder(fita);
+                editarfita[posicao] = 'X';
+                fita = Convert.ToString(editarfita);
+                txtfita.Text = fita;
+            }
+
+            if (Convert.ToString(dadoatual[0]) == "D")
+                {
+                    posicao= posicao + 1;
+                }
+            if (Convert.ToString(dadoatual[0]) == "E")
+                {
+                    posicao = posicao - 1;
+                }
+
+                linhaatual = Convert.ToString(dadoatual[4]);
+                if (Convert.ToInt32(dadoatual.Length) > 5)
+                {
+                linhaatual = linhaatual + Convert.ToString(dadoatual[5]);
+                }
+          
+                try { 
+                if (Convert.ToString(fita[posicao]) == ">")
+                {
+                    colunaatual = 1;
+                }
+                if (Convert.ToString(fita[posicao]) == "X")
+                {
+                    colunaatual = 2;
+                }
+                if (Convert.ToString(fita[posicao]) == "_")
+                {
+                    colunaatual = 3;
+                }
+                if (Convert.ToString(fita[posicao]) == "A")
+                {
+                    colunaatual = 4;
+                }
+                if (Convert.ToString(fita[posicao]) == "B")
+                {
+                    colunaatual = 5;
+                }
+                }
+                catch
+                {
+                    fita = fita + "_";
+                    if (Convert.ToString(fita[posicao]) == "_")
+                    {
+                        colunaatual = 3;
+                    }
+                }
+
+               if (Convert.ToString(fita[fita.Length - 1]) != "_")
+                {
+                    fita = fita + "_";
+                }
+
+                tabelamaquina.CurrentCell = tabelamaquina[colunaatual, Convert.ToInt32(linhaatual)];
+
+              
+
+            }
+            int contar = 0;
+            for (int i =0; i < fita.Length; i++)
+            {
+                if (Convert.ToString(fita[i]) == "X")
+                {
+                     contar = contar + 1;
+                }
+            }
+            txtArea.Text = "Area: " + Convert.ToString(contar);
         }
     }
 }

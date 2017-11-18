@@ -30,8 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnTamanhoArestas = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabelamaquina = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,22 +49,31 @@
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtfita = new System.Windows.Forms.RichTextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.ESTADOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SIMBOLO_INICIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SIMBOLO_X = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SIMBOLO_VAZIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VARIAVEL_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VARIAVEL_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtArea = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelamaquina)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Controls.Add(this.txtArea);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.btnTamanhoArestas);
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
@@ -75,38 +83,32 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 102);
+            this.button2.Location = new System.Drawing.Point(12, 38);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(162, 78);
             this.button2.TabIndex = 1;
             this.button2.Text = "Executar Máquina";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnTamanhoArestas
+            // tabelamaquina
             // 
-            this.btnTamanhoArestas.Location = new System.Drawing.Point(12, 18);
-            this.btnTamanhoArestas.Name = "btnTamanhoArestas";
-            this.btnTamanhoArestas.Size = new System.Drawing.Size(162, 78);
-            this.btnTamanhoArestas.TabIndex = 0;
-            this.btnTamanhoArestas.Text = "Informar Tamanho das Aresta";
-            this.btnTamanhoArestas.UseVisualStyleBackColor = true;
-            this.btnTamanhoArestas.Click += new System.EventHandler(this.btnTamanhoArestas_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabelamaquina.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabelamaquina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabelamaquina.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ESTADOS,
             this.SIMBOLO_INICIAL,
             this.SIMBOLO_X,
             this.SIMBOLO_VAZIO,
             this.VARIAVEL_A,
             this.VARIAVEL_B});
-            this.dataGridView1.Location = new System.Drawing.Point(206, 444);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1136, 261);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.tabelamaquina.Location = new System.Drawing.Point(206, 444);
+            this.tabelamaquina.Name = "tabelamaquina";
+            this.tabelamaquina.Size = new System.Drawing.Size(1136, 261);
+            this.tabelamaquina.TabIndex = 1;
+            this.tabelamaquina.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -238,6 +240,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.txtfita);
             this.groupBox1.Location = new System.Drawing.Point(206, 42);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1136, 372);
@@ -245,41 +250,87 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Visualização | Execução da Maquina";
             // 
+            // txtfita
+            // 
+            this.txtfita.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtfita.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfita.Location = new System.Drawing.Point(6, 19);
+            this.txtfita.Name = "txtfita";
+            this.txtfita.ReadOnly = true;
+            this.txtfita.Size = new System.Drawing.Size(1124, 347);
+            this.txtfita.TabIndex = 0;
+            this.txtfita.Text = ">XXXXXX_?";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(69, 7);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(105, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(11, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Tamanho: ";
+            // 
             // ESTADOS
             // 
             this.ESTADOS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ESTADOS.HeaderText = "Estados";
             this.ESTADOS.Name = "ESTADOS";
+            this.ESTADOS.ReadOnly = true;
             // 
             // SIMBOLO_INICIAL
             // 
             this.SIMBOLO_INICIAL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.SIMBOLO_INICIAL.HeaderText = "->";
             this.SIMBOLO_INICIAL.Name = "SIMBOLO_INICIAL";
+            this.SIMBOLO_INICIAL.ReadOnly = true;
             // 
             // SIMBOLO_X
             // 
             this.SIMBOLO_X.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.SIMBOLO_X.HeaderText = "X";
             this.SIMBOLO_X.Name = "SIMBOLO_X";
+            this.SIMBOLO_X.ReadOnly = true;
             // 
             // SIMBOLO_VAZIO
             // 
             this.SIMBOLO_VAZIO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.SIMBOLO_VAZIO.HeaderText = "-";
             this.SIMBOLO_VAZIO.Name = "SIMBOLO_VAZIO";
+            this.SIMBOLO_VAZIO.ReadOnly = true;
             // 
             // VARIAVEL_A
             // 
             this.VARIAVEL_A.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.VARIAVEL_A.HeaderText = "A";
             this.VARIAVEL_A.Name = "VARIAVEL_A";
+            this.VARIAVEL_A.ReadOnly = true;
             // 
             // VARIAVEL_B
             // 
             this.VARIAVEL_B.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.VARIAVEL_B.HeaderText = "B";
             this.VARIAVEL_B.Name = "VARIAVEL_B";
+            this.VARIAVEL_B.ReadOnly = true;
+            // 
+            // txtArea
+            // 
+            this.txtArea.AutoSize = true;
+            this.txtArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArea.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtArea.Location = new System.Drawing.Point(17, 125);
+            this.txtArea.Name = "txtArea";
+            this.txtArea.Size = new System.Drawing.Size(84, 33);
+            this.txtArea.TabIndex = 1;
+            this.txtArea.Text = "Area:";
             // 
             // frmTelaPrincipal
             // 
@@ -289,7 +340,7 @@
             this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tabelamaquina);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -299,9 +350,11 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmTelaPrincipal_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelamaquina)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,8 +363,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnTamanhoArestas;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tabelamaquina;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
@@ -331,12 +383,16 @@
         private System.Windows.Forms.ToolStripMenuItem tabelaDeEstadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualizarToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RichTextBox txtfita;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTADOS;
         private System.Windows.Forms.DataGridViewTextBoxColumn SIMBOLO_INICIAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn SIMBOLO_X;
         private System.Windows.Forms.DataGridViewTextBoxColumn SIMBOLO_VAZIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn VARIAVEL_A;
         private System.Windows.Forms.DataGridViewTextBoxColumn VARIAVEL_B;
+        private System.Windows.Forms.Label txtArea;
     }
 }
 
