@@ -49,21 +49,25 @@ namespace MaquinaTurinAreaCubo
           //  this.dataGridView1.Rows.Add(">", "", "", "", "", "");
             tabelamaquina.Rows.Add("0", "D,>,0", "D,X,0","D,A,1","","");
             tabelamaquina.Rows.Add("1","", "D,B,2", "", "", "");
-            tabelamaquina.Rows.Add("2", "", "D,X,2", "E,B,3", "", "D,B,2");
-            tabelamaquina.Rows.Add("3", "", "E,X,3", "", "", "D,B,4");
-            tabelamaquina.Rows.Add("4", "", "D,B,5", "", "", "");
-            tabelamaquina.Rows.Add("5", "", "D,X,5", "E,B,6", "", "D,B,5");
-            tabelamaquina.Rows.Add("6", "", "E,X,3", "", "D,A,7", "E,B,6");
-            tabelamaquina.Rows.Add("7", "D,>,8", "E,X,7", "E,_,7", "E,_,7", "D,X,7");
-            tabelamaquina.Rows.Add("8", "", "D,_,9", "D,_,16", "", "");
-            tabelamaquina.Rows.Add("9", "", "D,X,9", "D,_,10", "", "");
-            tabelamaquina.Rows.Add("10", "", "D,A,11", "E,_,14", "", "");
+            tabelamaquina.Rows.Add("2", "", "D,X,2", "D,A,3", "", "");
+            tabelamaquina.Rows.Add("3", "", "", "E,B,4", "", "");
+            tabelamaquina.Rows.Add("4", "", "E,X,4", "", "E,A,4", "D,B,5");
+            tabelamaquina.Rows.Add("5", "", "D,B,6", "", "E,A,8", "");
+            tabelamaquina.Rows.Add("6", "", "D,X,6", "", "D,A,7", "");
+            tabelamaquina.Rows.Add("7", "", "", "E,B,8", "", "D,B,7");
+            tabelamaquina.Rows.Add("8", "", "", "", "E,A,9", "E,B,8");
+            tabelamaquina.Rows.Add("9", "D,>,10", "E,X,9", "D,_,10", "", "D,B,5");
+            tabelamaquina.Rows.Add("10", "D,>,11", "E,X,10", "E,_,10", "D,_,10", "D,X,10");
             tabelamaquina.Rows.Add("11", "", "D,X,11", "D,_,12", "", "");
-            tabelamaquina.Rows.Add("12", "", "D,X,12", "E,X,13", "", "");
-            tabelamaquina.Rows.Add("13", "", "E,X,13", "E,_,13", "D,A,10", "");
-            tabelamaquina.Rows.Add("14", "", "", "E,_,15", "E,X,14", "");
-            tabelamaquina.Rows.Add("15", "", "E,X,15", "D,_,8", "", "");
-            tabelamaquina.Rows.Add("16", "", "D,_,16", "0,0,0", "", "");
+            tabelamaquina.Rows.Add("12", "", "D,X,13", "D,_20", "", "");
+            tabelamaquina.Rows.Add("13", "", "D,X,13", "D,_,14", "", "");
+            tabelamaquina.Rows.Add("14", "", "D,A,15", "E,_,18", "", "");
+            tabelamaquina.Rows.Add("15", "", "D,X,15", "D,_,16", "", "");
+            tabelamaquina.Rows.Add("16", "", "D,X,16", "E,X,17", "", "");
+            tabelamaquina.Rows.Add("17", "", "E,X,17", "E,_,17", "D,A,14", "");
+            tabelamaquina.Rows.Add("18", "", "", "E,_,19", "E,X,18", "");
+            tabelamaquina.Rows.Add("19", "", "E,X,19", "D,_,12", "", "");
+            tabelamaquina.Rows.Add("20", "", "D,_,20", "0,0,0", "", "");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -248,6 +252,8 @@ namespace MaquinaTurinAreaCubo
          
                 if (Convert.ToString(dadoatual) == "")
                 {
+                    frmProximo frmProximo = new frmProximo();
+                    frmProximo.ShowDialog();
                     MessageBox.Show("Maquina de turing com problema", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
@@ -416,6 +422,12 @@ namespace MaquinaTurinAreaCubo
         private void button1_Click_1(object sender, EventArgs e)
         {
             RodarMaquinaComPausa();
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSobre frmSobre = new frmSobre();
+            frmSobre.ShowDialog();
         }
     }
 }
