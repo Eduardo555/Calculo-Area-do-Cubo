@@ -1,4 +1,4 @@
-﻿
+﻿using MaquinaTurinAreaCubo.MaquinaTuring;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,76 +79,88 @@ namespace MaquinaTurinAreaCubo
                 MessageBox.Show("Digite um numero maior que 1", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+
+            RodarMaquina();
+
+
+
+        }
+
+        private void RodarMaquina()
+        {
+
             string valor = ">XXXXXX_";
             for (int i = 0; i < Convert.ToInt32(textBox1.Text); i++)
             {
                 valor = valor + "X";
             }
+
             txtfita.Text = valor + "_";
-
-            String linhaatual= "0"; //estado
-            Int32 colunaatual= 1;
+            String linhaatual = "0"; //estado
+            Int32 colunaatual = 1;
             Int32 posicao = 0;
-
-
             String fita = txtfita.Text;
-            String dadoatual="";
-          //  Char valor;
+            String dadoatual = "";
+ 
             tabelamaquina.CurrentCell = tabelamaquina[colunaatual, Convert.ToInt32(linhaatual)];
 
             while (dadoatual != "0,0,0")
-                {
+            {
 
-            dadoatual = Convert.ToString(tabelamaquina.CurrentCell.Value);
+                dadoatual = Convert.ToString(tabelamaquina.CurrentCell.Value);
 
-        
-            if (Convert.ToString(dadoatual[2]) == ">")
-            {
-           
-                StringBuilder editarfita = new StringBuilder(fita);
-                editarfita[posicao] = '>';
-                fita = Convert.ToString(editarfita);
-                txtfita.Text = fita;
- 
-            }
-            if (Convert.ToString(dadoatual[2]) == "A")
-            {
-                
-                StringBuilder editarfita = new StringBuilder(fita);
-                editarfita[posicao] = 'A';
-                fita = Convert.ToString(editarfita);
-                txtfita.Text = fita;
-            }
-            if (Convert.ToString(dadoatual[2]) == "B")
-            {
-                 
-                StringBuilder editarfita = new StringBuilder(fita);
-                editarfita[posicao] = 'B';
-                fita = Convert.ToString(editarfita);
-                txtfita.Text = fita;
-            }
-            if (Convert.ToString(dadoatual[2]) == "_" )
+                if (Convert.ToString(dadoatual) == "")
                 {
-               
-                StringBuilder editarfita = new StringBuilder(fita);
-                editarfita[posicao] = '_';
-                fita = Convert.ToString(editarfita);
-                txtfita.Text = fita;
-            }
-            if (Convert.ToString(dadoatual[2]) == "X")
-            {
-               
-                StringBuilder editarfita = new StringBuilder(fita);
-                editarfita[posicao] = 'X';
-                fita = Convert.ToString(editarfita);
-                txtfita.Text = fita;
-            }
-
-            if (Convert.ToString(dadoatual[0]) == "D")
-                {
-                    posicao= posicao + 1;
+                    MessageBox.Show("Maquina de turing com problema", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
                 }
-            if (Convert.ToString(dadoatual[0]) == "E")
+                if (Convert.ToString(dadoatual[2]) == ">")
+                {
+
+                    StringBuilder editarfita = new StringBuilder(fita);
+                    editarfita[posicao] = '>';
+                    fita = Convert.ToString(editarfita);
+                    txtfita.Text = fita;
+
+                }
+                else if (Convert.ToString(dadoatual[2]) == "A")
+                {
+
+                    StringBuilder editarfita = new StringBuilder(fita);
+                    editarfita[posicao] = 'A';
+                    fita = Convert.ToString(editarfita);
+                    txtfita.Text = fita;
+                }
+                else if (Convert.ToString(dadoatual[2]) == "B")
+                {
+
+                    StringBuilder editarfita = new StringBuilder(fita);
+                    editarfita[posicao] = 'B';
+                    fita = Convert.ToString(editarfita);
+                    txtfita.Text = fita;
+                }
+                else if (Convert.ToString(dadoatual[2]) == "_")
+                {
+
+                    StringBuilder editarfita = new StringBuilder(fita);
+                    editarfita[posicao] = '_';
+                    fita = Convert.ToString(editarfita);
+                    txtfita.Text = fita;
+                }
+                else if (Convert.ToString(dadoatual[2]) == "X")
+                {
+
+                    StringBuilder editarfita = new StringBuilder(fita);
+                    editarfita[posicao] = 'X';
+                    fita = Convert.ToString(editarfita);
+                    txtfita.Text = fita;
+                }
+
+                if (Convert.ToString(dadoatual[0]) == "D")
+                {
+                    posicao = posicao + 1;
+                }
+                else if (Convert.ToString(dadoatual[0]) == "E")
                 {
                     posicao = posicao - 1;
                 }
@@ -156,59 +168,254 @@ namespace MaquinaTurinAreaCubo
                 linhaatual = Convert.ToString(dadoatual[4]);
                 if (Convert.ToInt32(dadoatual.Length) > 5)
                 {
-                linhaatual = linhaatual + Convert.ToString(dadoatual[5]);
+                    linhaatual = linhaatual + Convert.ToString(dadoatual[5]);
                 }
-          
-                try { 
-                if (Convert.ToString(fita[posicao]) == ">")
+
+                try
                 {
-                    colunaatual = 1;
-                }
-                if (Convert.ToString(fita[posicao]) == "X")
-                {
-                    colunaatual = 2;
-                }
-                if (Convert.ToString(fita[posicao]) == "_")
-                {
-                    colunaatual = 3;
-                }
-                if (Convert.ToString(fita[posicao]) == "A")
-                {
-                    colunaatual = 4;
-                }
-                if (Convert.ToString(fita[posicao]) == "B")
-                {
-                    colunaatual = 5;
-                }
+                    if (Convert.ToString(fita[posicao]) == ">")
+                    {
+                        colunaatual = 1;
+                    }
+                    else if (Convert.ToString(fita[posicao]) == "X")
+                    {
+                        colunaatual = 2;
+                    }
+                    else if (Convert.ToString(fita[posicao]) == "_")
+                    {
+                        colunaatual = 3;
+                    }
+                    else if (Convert.ToString(fita[posicao]) == "A")
+                    {
+                        colunaatual = 4;
+                    }
+                    else if (Convert.ToString(fita[posicao]) == "B")
+                    {
+                        colunaatual = 5;
+                    }
                 }
                 catch
                 {
                     fita = fita + "_";
-                    if (Convert.ToString(fita[posicao]) == "_")
-                    {
-                        colunaatual = 3;
-                    }
+                    colunaatual = 3;
                 }
 
-               if (Convert.ToString(fita[fita.Length - 1]) != "_")
-                {
-                    fita = fita + "_";
-                }
-
+                /*     if (Convert.ToString(fita[fita.Length - 1]) != "_")
+                      {
+                          fita = fita + "_";
+                      }
+                      */
                 tabelamaquina.CurrentCell = tabelamaquina[colunaatual, Convert.ToInt32(linhaatual)];
 
-              
 
             }
             int contar = 0;
-            for (int i =0; i < fita.Length; i++)
+            for (int i = 0; i < fita.Length; i++)
             {
                 if (Convert.ToString(fita[i]) == "X")
                 {
-                     contar = contar + 1;
+                    contar = contar + 1;
                 }
             }
             txtArea.Text = "Area: " + Convert.ToString(contar);
+        }
+
+        private void RodarMaquinaComPausa()
+        {
+
+            string valor = ">XXXXXX_";
+            for (int i = 0; i < Convert.ToInt32(textBox1.Text); i++)
+            {
+                valor = valor + "X";
+            }
+
+            txtfita.Text = valor + "_";
+            String linhaatual = "0"; //estado
+            Int32 colunaatual = 1;
+            Int32 posicao = 0;
+            String fita = txtfita.Text;
+            String dadoatual = "";
+
+            tabelamaquina.CurrentCell = tabelamaquina[colunaatual, Convert.ToInt32(linhaatual)];
+
+            while (dadoatual != "0,0,0")
+            {
+
+                dadoatual = Convert.ToString(tabelamaquina.CurrentCell.Value);
+
+                txtfita.Select(0, fita.Length);
+                txtfita.SelectionColor = Color.Black;
+         
+                if (Convert.ToString(dadoatual) == "")
+                {
+                    MessageBox.Show("Maquina de turing com problema", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (Convert.ToString(dadoatual[2]) == ">")
+                {
+
+                    StringBuilder editarfita = new StringBuilder(fita);
+                    editarfita[posicao] = '>';
+                    fita = Convert.ToString(editarfita);
+                    txtfita.Text = fita;
+
+                }
+                else if (Convert.ToString(dadoatual[2]) == "A")
+                {
+
+                    StringBuilder editarfita = new StringBuilder(fita);
+                    editarfita[posicao] = 'A';
+                    fita = Convert.ToString(editarfita);
+                    txtfita.Text = fita;
+                }
+                else if (Convert.ToString(dadoatual[2]) == "B")
+                {
+
+                    StringBuilder editarfita = new StringBuilder(fita);
+                    editarfita[posicao] = 'B';
+                    fita = Convert.ToString(editarfita);
+                    txtfita.Text = fita;
+                }
+                else if (Convert.ToString(dadoatual[2]) == "_")
+                {
+
+                    StringBuilder editarfita = new StringBuilder(fita);
+                    editarfita[posicao] = '_';
+                    fita = Convert.ToString(editarfita);
+                    txtfita.Text = fita;
+                }
+                else if (Convert.ToString(dadoatual[2]) == "X")
+                {
+
+                    StringBuilder editarfita = new StringBuilder(fita);
+                    editarfita[posicao] = 'X';
+                    fita = Convert.ToString(editarfita);
+                    txtfita.Text = fita;
+                }
+
+                txtfita.Select(posicao, posicao);
+                txtfita.SelectionColor = Color.Blue;
+
+                if (Convert.ToString(dadoatual[0]) == "D")
+                {
+                    posicao = posicao + 1;
+                }
+                else if (Convert.ToString(dadoatual[0]) == "E")
+                {
+                    posicao = posicao - 1;
+                }
+
+
+                linhaatual = Convert.ToString(dadoatual[4]);
+                if (Convert.ToInt32(dadoatual.Length) > 5)
+                {
+                    linhaatual = linhaatual + Convert.ToString(dadoatual[5]);
+                }
+
+                try
+                {
+                    if (Convert.ToString(fita[posicao]) == ">")
+                    {
+                        colunaatual = 1;
+                    }
+                    else if (Convert.ToString(fita[posicao]) == "X")
+                    {
+                        colunaatual = 2;
+                    }
+                    else if (Convert.ToString(fita[posicao]) == "_")
+                    {
+                        colunaatual = 3;
+                    }
+                    else if (Convert.ToString(fita[posicao]) == "A")
+                    {
+                        colunaatual = 4;
+                    }
+                    else if (Convert.ToString(fita[posicao]) == "B")
+                    {
+                        colunaatual = 5;
+                    }
+                }
+                catch
+                {
+                    fita = fita + "_";
+                    colunaatual = 3;
+                }
+                if (dadoatual == "0,0,0")
+                {
+                    frmProximo frmProximo = new frmProximo();
+                    frmProximo.ShowDialog();
+                }
+                else
+                {
+                MessageBox.Show("Proximo", "Proximo", MessageBoxButtons.OK);
+                }
+                tabelamaquina.CurrentCell = tabelamaquina[colunaatual, Convert.ToInt32(linhaatual)];
+
+    
+
+     
+
+                /*
+                frmProximo frmProximo = new frmProximo();
+                frmProximo.Show();*/
+
+
+            }
+            int contar = 0;
+            for (int i = 0; i < fita.Length; i++)
+            {
+                if (Convert.ToString(fita[i]) == "X")
+                {
+                    contar = contar + 1;
+                }
+            }
+            txtArea.Text = "Area: " + Convert.ToString(contar);
+        }
+
+        private void permitirEdiçõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtfita.ReadOnly = false;
+            tabelamaquina.ReadOnly = false;
+        }
+
+        private void limparToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+        }
+
+        private void visualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void executarMaquinaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button2.PerformClick();
+        }
+
+        private void arquivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reiniciarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            RodarMaquinaComPausa();
         }
     }
 }

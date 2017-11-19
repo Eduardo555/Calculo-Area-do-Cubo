@@ -51,11 +51,19 @@
     <Compile Include="frmTelaPrincipal.Designer.cs">
       <DependentUpon>frmTelaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="MaquinaTuring\clnFita.cs" />
+    <Compile Include="frmFinalizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFinalizar.Designer.cs">
+      <DependentUpon>frmFinalizar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmTelaPrincipal.resx">
       <DependentUpon>frmTelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFinalizar.resx">
+      <DependentUpon>frmFinalizar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

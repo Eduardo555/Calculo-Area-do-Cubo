@@ -29,36 +29,31 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtArea = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.tabelamaquina = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.máquinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualizarFitaOriginalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.executarMaquinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pararToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reiniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fitaDeExecuçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualizarFitaInicialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabelaDeEstadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtfita = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.ESTADOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SIMBOLO_INICIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SIMBOLO_X = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SIMBOLO_VAZIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VARIAVEL_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VARIAVEL_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtArea = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.máquinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.executarMaquinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reiniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.permitirEdiçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtfita = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelamaquina)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -70,6 +65,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtArea);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBox1);
@@ -80,6 +76,34 @@
             this.panel1.Size = new System.Drawing.Size(188, 711);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtArea
+            // 
+            this.txtArea.AutoSize = true;
+            this.txtArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArea.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtArea.Location = new System.Drawing.Point(12, 162);
+            this.txtArea.Name = "txtArea";
+            this.txtArea.Size = new System.Drawing.Size(84, 33);
+            this.txtArea.TabIndex = 1;
+            this.txtArea.Text = "Area:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(11, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Tamanho: ";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(69, 7);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(105, 20);
+            this.textBox1.TabIndex = 2;
             // 
             // button2
             // 
@@ -106,178 +130,10 @@
             this.VARIAVEL_B});
             this.tabelamaquina.Location = new System.Drawing.Point(206, 444);
             this.tabelamaquina.Name = "tabelamaquina";
+            this.tabelamaquina.ReadOnly = true;
             this.tabelamaquina.Size = new System.Drawing.Size(1136, 261);
             this.tabelamaquina.TabIndex = 1;
             this.tabelamaquina.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(203, 427);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Visualização Tabela de Estados";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.arquivoToolStripMenuItem,
-            this.máquinaToolStripMenuItem,
-            this.fitaDeExecuçãoToolStripMenuItem,
-            this.tabelaDeEstadosToolStripMenuItem,
-            this.ajudaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1354, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // arquivoToolStripMenuItem
-            // 
-            this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sairToolStripMenuItem});
-            this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
-            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.arquivoToolStripMenuItem.Text = "Arquivo";
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.sairToolStripMenuItem.Text = "Sair";
-            // 
-            // máquinaToolStripMenuItem
-            // 
-            this.máquinaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.visualizarFitaOriginalToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.executarMaquinaToolStripMenuItem,
-            this.pararToolStripMenuItem,
-            this.reiniciarToolStripMenuItem});
-            this.máquinaToolStripMenuItem.Name = "máquinaToolStripMenuItem";
-            this.máquinaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.máquinaToolStripMenuItem.Text = "Máquina";
-            // 
-            // visualizarFitaOriginalToolStripMenuItem
-            // 
-            this.visualizarFitaOriginalToolStripMenuItem.Name = "visualizarFitaOriginalToolStripMenuItem";
-            this.visualizarFitaOriginalToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
-            this.visualizarFitaOriginalToolStripMenuItem.Text = "Informar Tamanho das Aresta";
-            this.visualizarFitaOriginalToolStripMenuItem.Click += new System.EventHandler(this.visualizarFitaOriginalToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(227, 6);
-            // 
-            // executarMaquinaToolStripMenuItem
-            // 
-            this.executarMaquinaToolStripMenuItem.Name = "executarMaquinaToolStripMenuItem";
-            this.executarMaquinaToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
-            this.executarMaquinaToolStripMenuItem.Text = "Executar";
-            // 
-            // pararToolStripMenuItem
-            // 
-            this.pararToolStripMenuItem.Name = "pararToolStripMenuItem";
-            this.pararToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
-            this.pararToolStripMenuItem.Text = "Parar";
-            // 
-            // reiniciarToolStripMenuItem
-            // 
-            this.reiniciarToolStripMenuItem.Name = "reiniciarToolStripMenuItem";
-            this.reiniciarToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
-            this.reiniciarToolStripMenuItem.Text = "Reiniciar";
-            // 
-            // fitaDeExecuçãoToolStripMenuItem
-            // 
-            this.fitaDeExecuçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.limparToolStripMenuItem,
-            this.visualizarFitaInicialToolStripMenuItem});
-            this.fitaDeExecuçãoToolStripMenuItem.Name = "fitaDeExecuçãoToolStripMenuItem";
-            this.fitaDeExecuçãoToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.fitaDeExecuçãoToolStripMenuItem.Text = "Fita de Execução";
-            // 
-            // limparToolStripMenuItem
-            // 
-            this.limparToolStripMenuItem.Name = "limparToolStripMenuItem";
-            this.limparToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
-            this.limparToolStripMenuItem.Text = "Limpar";
-            // 
-            // visualizarFitaInicialToolStripMenuItem
-            // 
-            this.visualizarFitaInicialToolStripMenuItem.Name = "visualizarFitaInicialToolStripMenuItem";
-            this.visualizarFitaInicialToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
-            this.visualizarFitaInicialToolStripMenuItem.Text = "Visualizar Fita Inicial";
-            // 
-            // tabelaDeEstadosToolStripMenuItem
-            // 
-            this.tabelaDeEstadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.visualizarToolStripMenuItem});
-            this.tabelaDeEstadosToolStripMenuItem.Name = "tabelaDeEstadosToolStripMenuItem";
-            this.tabelaDeEstadosToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
-            this.tabelaDeEstadosToolStripMenuItem.Text = "Tabela de Estados";
-            // 
-            // visualizarToolStripMenuItem
-            // 
-            this.visualizarToolStripMenuItem.Name = "visualizarToolStripMenuItem";
-            this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.visualizarToolStripMenuItem.Text = "Visualizar";
-            // 
-            // ajudaToolStripMenuItem
-            // 
-            this.ajudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sobreToolStripMenuItem});
-            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
-            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.ajudaToolStripMenuItem.Text = "Ajuda";
-            // 
-            // sobreToolStripMenuItem
-            // 
-            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.sobreToolStripMenuItem.Text = "Sobre";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.txtfita);
-            this.groupBox1.Location = new System.Drawing.Point(206, 42);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1136, 372);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Visualização | Execução da Maquina";
-            // 
-            // txtfita
-            // 
-            this.txtfita.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtfita.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfita.Location = new System.Drawing.Point(6, 19);
-            this.txtfita.Name = "txtfita";
-            this.txtfita.ReadOnly = true;
-            this.txtfita.Size = new System.Drawing.Size(1124, 347);
-            this.txtfita.TabIndex = 0;
-            this.txtfita.Text = ">XXXXXX_?";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(69, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(105, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(11, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Tamanho: ";
             // 
             // ESTADOS
             // 
@@ -321,16 +177,127 @@
             this.VARIAVEL_B.Name = "VARIAVEL_B";
             this.VARIAVEL_B.ReadOnly = true;
             // 
-            // txtArea
+            // label1
             // 
-            this.txtArea.AutoSize = true;
-            this.txtArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtArea.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtArea.Location = new System.Drawing.Point(17, 125);
-            this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(84, 33);
-            this.txtArea.TabIndex = 1;
-            this.txtArea.Text = "Area:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(203, 427);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Visualização Tabela de Estados";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.arquivoToolStripMenuItem,
+            this.máquinaToolStripMenuItem,
+            this.ajudaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1354, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // arquivoToolStripMenuItem
+            // 
+            this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sairToolStripMenuItem});
+            this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
+            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.arquivoToolStripMenuItem.Text = "Arquivo";
+            this.arquivoToolStripMenuItem.Click += new System.EventHandler(this.arquivoToolStripMenuItem_Click);
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
+            // máquinaToolStripMenuItem
+            // 
+            this.máquinaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.executarMaquinaToolStripMenuItem,
+            this.reiniciarToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.permitirEdiçõesToolStripMenuItem});
+            this.máquinaToolStripMenuItem.Name = "máquinaToolStripMenuItem";
+            this.máquinaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.máquinaToolStripMenuItem.Text = "Máquina";
+            // 
+            // executarMaquinaToolStripMenuItem
+            // 
+            this.executarMaquinaToolStripMenuItem.Name = "executarMaquinaToolStripMenuItem";
+            this.executarMaquinaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.executarMaquinaToolStripMenuItem.Text = "Executar";
+            this.executarMaquinaToolStripMenuItem.Click += new System.EventHandler(this.executarMaquinaToolStripMenuItem_Click);
+            // 
+            // reiniciarToolStripMenuItem
+            // 
+            this.reiniciarToolStripMenuItem.Name = "reiniciarToolStripMenuItem";
+            this.reiniciarToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.reiniciarToolStripMenuItem.Text = "Reiniciar";
+            this.reiniciarToolStripMenuItem.Click += new System.EventHandler(this.reiniciarToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(156, 6);
+            // 
+            // permitirEdiçõesToolStripMenuItem
+            // 
+            this.permitirEdiçõesToolStripMenuItem.Name = "permitirEdiçõesToolStripMenuItem";
+            this.permitirEdiçõesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.permitirEdiçõesToolStripMenuItem.Text = "Permitir Edições";
+            this.permitirEdiçõesToolStripMenuItem.Click += new System.EventHandler(this.permitirEdiçõesToolStripMenuItem_Click);
+            // 
+            // ajudaToolStripMenuItem
+            // 
+            this.ajudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sobreToolStripMenuItem});
+            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
+            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.ajudaToolStripMenuItem.Text = "Ajuda";
+            // 
+            // sobreToolStripMenuItem
+            // 
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.sobreToolStripMenuItem.Text = "Sobre";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.txtfita);
+            this.groupBox1.Location = new System.Drawing.Point(206, 42);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1136, 372);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Visualização | Execução da Maquina";
+            // 
+            // txtfita
+            // 
+            this.txtfita.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtfita.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfita.Location = new System.Drawing.Point(6, 19);
+            this.txtfita.Name = "txtfita";
+            this.txtfita.ReadOnly = true;
+            this.txtfita.Size = new System.Drawing.Size(1124, 347);
+            this.txtfita.TabIndex = 0;
+            this.txtfita.Text = ">XXXXXX_?";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(14, 122);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(160, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "executar por estado";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frmTelaPrincipal
             // 
@@ -369,30 +336,25 @@
         private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem máquinaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualizarFitaOriginalToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem executarMaquinaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pararToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fitaDeExecuçãoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem limparToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualizarFitaInicialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolStripMenuItem reiniciarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tabelaDeEstadosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualizarToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RichTextBox txtfita;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label txtArea;
+        private System.Windows.Forms.ToolStripMenuItem permitirEdiçõesToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTADOS;
         private System.Windows.Forms.DataGridViewTextBoxColumn SIMBOLO_INICIAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn SIMBOLO_X;
         private System.Windows.Forms.DataGridViewTextBoxColumn SIMBOLO_VAZIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn VARIAVEL_A;
         private System.Windows.Forms.DataGridViewTextBoxColumn VARIAVEL_B;
-        private System.Windows.Forms.Label txtArea;
+        private System.Windows.Forms.Button button1;
     }
 }
 
