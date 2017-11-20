@@ -58,16 +58,20 @@ namespace MaquinaTurinAreaCubo
             tabelamaquina.Rows.Add("8", "", "", "", "E,A,9", "E,B,8");
             tabelamaquina.Rows.Add("9", "D,>,10", "E,X,9", "D,_,10", "", "D,B,5");
             tabelamaquina.Rows.Add("10", "D,>,11", "E,X,10", "E,_,10", "D,_,10", "D,X,10");
-            tabelamaquina.Rows.Add("11", "", "D,X,11", "D,_,12", "", "");
-            tabelamaquina.Rows.Add("12", "", "D,X,13", "D,_20", "", "");
+            tabelamaquina.Rows.Add("11", "", "D,X,11", "D,_,12", "D,_,10", "");
+            tabelamaquina.Rows.Add("12", "", "D,B,13", "D,_,20", "", "");
             tabelamaquina.Rows.Add("13", "", "D,X,13", "D,_,14", "", "");
             tabelamaquina.Rows.Add("14", "", "D,A,15", "E,_,18", "", "");
             tabelamaquina.Rows.Add("15", "", "D,X,15", "D,_,16", "", "");
             tabelamaquina.Rows.Add("16", "", "D,X,16", "E,X,17", "", "");
             tabelamaquina.Rows.Add("17", "", "E,X,17", "E,_,17", "D,A,14", "");
             tabelamaquina.Rows.Add("18", "", "", "E,_,19", "E,X,18", "");
-            tabelamaquina.Rows.Add("19", "", "E,X,19", "D,_,12", "", "");
-            tabelamaquina.Rows.Add("20", "", "D,_,20", "0,0,0", "", "");
+            tabelamaquina.Rows.Add("19", "", "E,X,19", "D,_,12", "", "D,B,12");
+            tabelamaquina.Rows.Add("20", "", "D,_,20", "D,A,21", "", "");
+            tabelamaquina.Rows.Add("21", "", "D,_,22", "D,_,21", "", "");
+            tabelamaquina.Rows.Add("22", "", "D,_,22", "D,_,23", "", "");
+            tabelamaquina.Rows.Add("23", "", "D,X,23", "E,B,24", "", "");
+            tabelamaquina.Rows.Add("24", "", "E,X,24", "E,_,24", "", "");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -83,6 +87,7 @@ namespace MaquinaTurinAreaCubo
                 MessageBox.Show("Digite um numero maior que 1", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+
 
             RodarMaquina();
 
@@ -353,7 +358,11 @@ namespace MaquinaTurinAreaCubo
                 }
                 else
                 {
-                MessageBox.Show("Proximo", "Proximo", MessageBoxButtons.OK);
+                    DialogResult dr = MessageBox.Show("Linha Atual= " + linhaatual, "Proximo", MessageBoxButtons.OKCancel);
+                    if (dr == DialogResult.Cancel)
+                    {
+                        return;
+                    }
                 }
                 tabelamaquina.CurrentCell = tabelamaquina[colunaatual, Convert.ToInt32(linhaatual)];
 
