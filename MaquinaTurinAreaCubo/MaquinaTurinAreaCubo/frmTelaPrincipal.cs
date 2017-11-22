@@ -307,6 +307,9 @@ namespace MaquinaTurinAreaCubo
                 txtfita.Select(posicao, posicao);
                 txtfita.SelectionColor = Color.Blue;
 
+                txtfita.Select(posicao +1, posicao);
+                txtfita.SelectionColor = Color.Black;
+
                 if (Convert.ToString(dadoatual[0]) == "D")
                 {
                     posicao = posicao + 1;

@@ -19,3 +19,15 @@ C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\Maqu
 C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.exe
 C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.pdb
 C:\Users\Eduardo\Documents\GitHub\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.Arestas.frmTamanhoArestas.resources
+C:\Users\Eduardo\Desktop\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\bin\Debug\MaquinaTurinAreaCubo.exe.config
+C:\Users\Eduardo\Desktop\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\bin\Debug\MaquinaTurinAreaCubo.exe
+C:\Users\Eduardo\Desktop\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\bin\Debug\MaquinaTurinAreaCubo.pdb
+C:\Users\Eduardo\Desktop\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.csprojResolveAssemblyReference.cache
+C:\Users\Eduardo\Desktop\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.frmSobre.resources
+C:\Users\Eduardo\Desktop\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.frmTelaPrincipal.resources
+C:\Users\Eduardo\Desktop\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.MaquinaTuring.frmProximo.resources
+C:\Users\Eduardo\Desktop\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.Properties.Resources.resources
+C:\Users\Eduardo\Desktop\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.csproj.GenerateResource.Cache
+C:\Users\Eduardo\Desktop\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.csproj.CoreCompileInputs.cache
+C:\Users\Eduardo\Desktop\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.exe
+C:\Users\Eduardo\Desktop\Calculo-Area-do-Cubo\MaquinaTurinAreaCubo\MaquinaTurinAreaCubo\obj\Debug\MaquinaTurinAreaCubo.pdb
