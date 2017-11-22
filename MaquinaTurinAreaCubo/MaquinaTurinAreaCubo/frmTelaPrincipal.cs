@@ -77,7 +77,16 @@ namespace MaquinaTurinAreaCubo
             tabelamaquina.Rows.Add("27", "",       "E,_,28",    "D,_,27",   "",         "E,_,29");
             tabelamaquina.Rows.Add("28", "",       "D,X,26",    "E,_,28",   "",         "");
             tabelamaquina.Rows.Add("29", "",       "E,_,30",    "E,_,29",   "",         "");
-            tabelamaquina.Rows.Add("30", "",       "E,X,30",    "",         "E,_,30",   "");
+            tabelamaquina.Rows.Add("30", "D,>,31", "E,X,30",    "",         "E,_,30",   "");
+            tabelamaquina.Rows.Add("31", "",       "D,_,32",    "D,_,39",   "",         "");
+            tabelamaquina.Rows.Add("32", "",       "D,X,32",    "D,_,33",   "",         "");
+            tabelamaquina.Rows.Add("33", "",       "D,A,34",    "E,_,37",   "",         "");
+            tabelamaquina.Rows.Add("34", "",       "D,X,34",    "D,_,35",   "",         "");
+            tabelamaquina.Rows.Add("35", "",       "D,X,35",    "E,X,36",   "",         "");
+            tabelamaquina.Rows.Add("36", "",       "E,X,36",    "E,_,36",   "D,A,33",   "");
+            tabelamaquina.Rows.Add("37", "",       "",          "E,_,38",   "E,X,37",   "");
+            tabelamaquina.Rows.Add("38", "",       "E,X,38",    "D,_,31",    "",         "");
+            tabelamaquina.Rows.Add("39", "",       "D,_,39",    "0,0,0",    "",         "");
         }
 
         private void button2_Click(object sender, EventArgs e)
