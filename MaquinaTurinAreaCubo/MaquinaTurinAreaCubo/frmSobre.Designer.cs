@@ -54,9 +54,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(49, 99);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(255, 13);
+            this.label2.Size = new System.Drawing.Size(292, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Desenvolvido por Dimitry Ladislau e Eduardo Spillere";
+            this.label2.Text = "Desenvolvido por Dimitry Ladislau e Eduardo Spillere Anzolin";
             // 
             // button1
             // 

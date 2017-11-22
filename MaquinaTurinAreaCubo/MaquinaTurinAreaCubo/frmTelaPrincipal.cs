@@ -43,6 +43,8 @@ namespace MaquinaTurinAreaCubo
 
         }
 
+        #region --- CONFIGURACAO INICIAL MAQUINA E LOAD DO FORM ---
+
         private void frmTelaPrincipal_Load(object sender, EventArgs e)
         {
             tabelamaquina.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -89,11 +91,13 @@ namespace MaquinaTurinAreaCubo
             tabelamaquina.Rows.Add("39", "",       "D,_,39",    "0,0,0",    "",         "");
         }
 
+        #endregion
+
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
+            if (textBox1.Text.Equals("") || textBox1.Text.Equals(0))
             {
-                MessageBox.Show("Digite um numero", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Digite um numero válido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             if (Convert.ToInt32(textBox1.Text) <= 1)
@@ -103,12 +107,11 @@ namespace MaquinaTurinAreaCubo
                 return;
             }
 
-
             RodarMaquina();
 
-
-
         }
+
+        #region --- RODAR MAQUINA DIRETO SEM PAUSAS ---
 
         private void RodarMaquina()
         {
@@ -120,13 +123,13 @@ namespace MaquinaTurinAreaCubo
             }
 
             txtfita.Text = valor + "_";
-            String linhaatual = "0"; //estado
+            String linhaatual = "0"; // referente aos estados
             Int32 colunaatual = 1;
             Int32 posicao = 0;
             String fita = txtfita.Text;
             String dadoatual = "";
  
-            tabelamaquina.CurrentCell = tabelamaquina[colunaatual, Convert.ToInt32(linhaatual)];
+            tabelamaquina.CurrentCell = tabelamaquina[colunaatual, Convert.ToInt32(linhaatual)];    // seleciona celula
 
             while (dadoatual != "0,0,0")
             {
@@ -224,13 +227,7 @@ namespace MaquinaTurinAreaCubo
                     colunaatual = 3;
                 }
 
-                /*     if (Convert.ToString(fita[fita.Length - 1]) != "_")
-                      {
-                          fita = fita + "_";
-                      }
-                      */
                 tabelamaquina.CurrentCell = tabelamaquina[colunaatual, Convert.ToInt32(linhaatual)];
-
 
             }
             int contar = 0;
@@ -243,6 +240,10 @@ namespace MaquinaTurinAreaCubo
             }
             txtArea.Text = "Area: " + Convert.ToString(contar);
         }
+
+        #endregion
+
+        #region --- RODAR MAQUINA COM PAUSAS ---
 
         private void RodarMaquinaComPausa()
         {
@@ -384,15 +385,6 @@ namespace MaquinaTurinAreaCubo
                 }
                 tabelamaquina.CurrentCell = tabelamaquina[colunaatual, Convert.ToInt32(linhaatual)];
 
-    
-
-     
-
-                /*
-                frmProximo frmProximo = new frmProximo();
-                frmProximo.Show();*/
-
-
             }
             int contar = 0;
             for (int i = 0; i < fita.Length; i++)
@@ -404,6 +396,10 @@ namespace MaquinaTurinAreaCubo
             }
             txtArea.Text = "Area: " + Convert.ToString(contar);
         }
+
+        #endregion
+
+        #region --- BOTOES E OUTROS ---
 
         private void permitirEdiçõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -448,7 +444,15 @@ namespace MaquinaTurinAreaCubo
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            RodarMaquinaComPausa();
+            if (textBox1.Text.Equals(0) || textBox1.Text.Equals(""))
+            {
+                MessageBox.Show("É preciso informar um valor valido para calcular!");
+            }
+            else
+            {
+                RodarMaquinaComPausa();
+            }
+            
         }
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
@@ -456,5 +460,8 @@ namespace MaquinaTurinAreaCubo
             frmSobre frmSobre = new frmSobre();
             frmSobre.ShowDialog();
         }
+
+        #endregion
+
     }
 }
