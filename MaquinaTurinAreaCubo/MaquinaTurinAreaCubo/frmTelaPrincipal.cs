@@ -138,63 +138,48 @@ namespace MaquinaTurinAreaCubo
  
             tabelamaquina.CurrentCell = tabelamaquina[colunaatual, int.Parse(linhaatual)];    // seleciona celula
 
-            while (dadoatual != "0,0,0")
+            while (!dadoatual.Equals("0,0,0"))
             {
 
                 dadoatual = (string)tabelamaquina.CurrentCell.Value;
+                StringBuilder editarfita = new StringBuilder(fita);
 
                 if (string.IsNullOrEmpty((string)dadoatual))
                 {
                     MessageBox.Show("Maquina de turing com problema", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                if (Convert.ToString(dadoatual[2]).Equals(">"))
+                if (dadoatual[2].Equals('>'))
                 {
-
-                    StringBuilder editarfita = new StringBuilder(fita);
                     editarfita[posicao] = '>';
                     fita = Convert.ToString(editarfita);
-                    txtfita.Text = fita;
-
                 }
-                else if (Convert.ToString(dadoatual[2]).Equals("A"))
+                else if (dadoatual[2].Equals('A'))
                 {
-
-                    StringBuilder editarfita = new StringBuilder(fita);
                     editarfita[posicao] = 'A';
                     fita = Convert.ToString(editarfita);
-                    txtfita.Text = fita;
                 }
-                else if (Convert.ToString(dadoatual[2]).Equals("B"))
+                else if (dadoatual[2].Equals('B'))
                 {
-
-                    StringBuilder editarfita = new StringBuilder(fita);
                     editarfita[posicao] = 'B';
                     fita = Convert.ToString(editarfita);
-                    txtfita.Text = fita;
                 }
-                else if (Convert.ToString(dadoatual[2]).Equals("_"))
+                else if (dadoatual[2].Equals('_'))
                 {
-
-                    StringBuilder editarfita = new StringBuilder(fita);
                     editarfita[posicao] = '_';
                     fita = Convert.ToString(editarfita);
-                    txtfita.Text = fita;
                 }
-                else if (Convert.ToString(dadoatual[2]).Equals("X"))
+                else if (dadoatual[2].Equals('X'))
                 {
-
-                    StringBuilder editarfita = new StringBuilder(fita);
                     editarfita[posicao] = 'X';
                     fita = Convert.ToString(editarfita);
-                    txtfita.Text = fita;
                 }
 
-                if (Convert.ToString(dadoatual[0]).Equals("D"))
+                if (dadoatual[0].Equals('D'))
                 {
                     posicao = posicao + 1;
                 }
-                else if (Convert.ToString(dadoatual[0]).Equals("E"))
+                else if (dadoatual[0].Equals('E'))
                 {
                     posicao = posicao - 1;
                 }
@@ -207,23 +192,23 @@ namespace MaquinaTurinAreaCubo
 
                 try
                 {
-                    if (Convert.ToString(fita[posicao]).Equals(">"))
+                    if (fita[posicao].Equals('>'))
                     {
                         colunaatual = 1;
                     }
-                    else if (Convert.ToString(fita[posicao]).Equals("X"))
+                    else if (fita[posicao].Equals('X'))
                     {
                         colunaatual = 2;
                     }
-                    else if (Convert.ToString(fita[posicao]).Equals("_"))
+                    else if (fita[posicao].Equals('_'))
                     {
                         colunaatual = 3;
                     }
-                    else if (Convert.ToString(fita[posicao]).Equals("A"))
+                    else if (fita[posicao].Equals('A'))
                     {
                         colunaatual = 4;
                     }
-                    else if (Convert.ToString(fita[posicao]).Equals("B"))
+                    else if (fita[posicao].Equals('B'))
                     {
                         colunaatual = 5;
                     }
@@ -233,14 +218,14 @@ namespace MaquinaTurinAreaCubo
                     fita = fita + "_";
                     colunaatual = 3;
                 }
-
+                txtfita.Text = fita;
                 tabelamaquina.CurrentCell = tabelamaquina[colunaatual, int.Parse(linhaatual)];
 
             }
             int contar = 0;
             for (int i = 0; i < fita.Length; i++)
             {
-                if (Convert.ToString(fita[i]).Equals("X"))
+                if (fita[i].Equals('X'))
                 {
                     contar = contar + 1;
                 }
@@ -248,7 +233,7 @@ namespace MaquinaTurinAreaCubo
 
             lbCalculando.Text = "Pronto";
             lbCalculando.Refresh();
-            lbResposta.Text = Convert.ToString(contar);
+            lbResposta.Text = contar.ToString();
         }
 
         #endregion
@@ -454,7 +439,7 @@ namespace MaquinaTurinAreaCubo
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (textBox1.Text.Equals(0) || textBox1.Text.Equals(""))
+            if (textBox1.Text.Equals("0") || textBox1.Text.Equals(""))
             {
                 MessageBox.Show("É preciso informar um valor valido para calcular!");
             }
