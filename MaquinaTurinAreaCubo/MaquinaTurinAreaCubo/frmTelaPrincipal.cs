@@ -99,15 +99,15 @@ namespace MaquinaTurinAreaCubo
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Equals("") || textBox1.Text.Equals(0))
+            if (textBox1.Text.Equals("0") || textBox1.Text.Equals(""))
             {
                 MessageBox.Show("Digite um numero válido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (Convert.ToInt32(textBox1.Text) <= 1)
+            if (Convert.ToInt32(textBox1.Text) < 0)
             {
 
-                MessageBox.Show("Digite um numero maior que 1", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Digite um numero positivo", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -123,7 +123,8 @@ namespace MaquinaTurinAreaCubo
         {
 
             string valor = ">XXXXXX_";
-            for (int i = 0; i < int.Parse(textBox1.Text); i++)
+            int numeroTextBox = int.Parse(textBox1.Text);   // executar conversao apenas uma ves
+            for (int i = 0; i < numeroTextBox; i++)
             {
                 valor = valor + "X";
             }
