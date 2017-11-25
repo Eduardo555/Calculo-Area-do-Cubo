@@ -90,9 +90,10 @@
             // txtArea
             // 
             this.txtArea.AutoSize = true;
+            this.txtArea.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtArea.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtArea.Location = new System.Drawing.Point(12, 162);
+            this.txtArea.ForeColor = System.Drawing.Color.Red;
+            this.txtArea.Location = new System.Drawing.Point(12, 160);
             this.txtArea.Name = "txtArea";
             this.txtArea.Size = new System.Drawing.Size(84, 33);
             this.txtArea.TabIndex = 1;
