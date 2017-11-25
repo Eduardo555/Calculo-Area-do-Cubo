@@ -50,49 +50,53 @@ namespace MaquinaTurinAreaCubo
 
             lbCalculando.Text = "Pronto";
             lbCalculando.Refresh();
+            montarTabelaEstados();
+            
+        }
 
+        private void montarTabelaEstados()
+        {
             tabelamaquina.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-          //  this.dataGridView1.Rows.Add(">", "", "", "", "", "");
-            tabelamaquina.Rows.Add("0",  "D,>,0", "D,X,0",      "D,A,1",    "",         "");
-            tabelamaquina.Rows.Add("1",  "",       "D,B,2",     "",         "",         "");
-            tabelamaquina.Rows.Add("2",  "",       "D,X,2",     "D,A,3",    "",         "");
-            tabelamaquina.Rows.Add("3",  "",       "",          "E,B,4",    "",         "");
-            tabelamaquina.Rows.Add("4",  "",       "E,X,4",     "",         "E,A,4",    "D,B,5");
-            tabelamaquina.Rows.Add("5",  "",       "D,B,6",     "",         "E,A,8",    "");
-            tabelamaquina.Rows.Add("6",  "",       "D,X,6",     "",         "D,A,7",    "");
-            tabelamaquina.Rows.Add("7",  "",       "",          "E,B,8",    "",         "D,B,7");
-            tabelamaquina.Rows.Add("8",  "",       "",          "",         "E,A,9",    "E,B,8");
-            tabelamaquina.Rows.Add("9",  "D,>,10", "E,X,9",     "D,_,10",   "",         "D,B,5");
-            tabelamaquina.Rows.Add("10", "D,>,11", "E,X,10",    "E,_,10",   "D,_,10",   "D,X,10");
-            tabelamaquina.Rows.Add("11", "",       "D,X,11",    "D,_,12",   "D,_,10",   "");
-            tabelamaquina.Rows.Add("12", "",       "D,B,13",    "D,_,20",   "",         "");
-            tabelamaquina.Rows.Add("13", "",       "D,X,13",    "D,_,14",   "",         "");
-            tabelamaquina.Rows.Add("14", "",       "D,A,15",    "E,_,18",   "",         "");
-            tabelamaquina.Rows.Add("15", "",       "D,X,15",    "D,_,16",   "",         "");
-            tabelamaquina.Rows.Add("16", "",       "D,X,16",    "E,X,17",   "",         "");
-            tabelamaquina.Rows.Add("17", "",       "E,X,17",    "E,_,17",   "D,A,14",   "");
-            tabelamaquina.Rows.Add("18", "",       "",          "E,_,19",   "E,X,18",   "");
-            tabelamaquina.Rows.Add("19", "",       "E,X,19",    "D,_,12",   "",         "D,B,12");
-            tabelamaquina.Rows.Add("20", "",       "D,_,20",    "E,_,20",   "",         "E,_,21");
-            tabelamaquina.Rows.Add("21", "",       "",          "D,A,22",   "",         "E,_,21");
-            tabelamaquina.Rows.Add("22", "",       "D,X,23",    "D,_,22",   "",         "");
-            tabelamaquina.Rows.Add("23", "",       "D,X,23",    "E,B,24",   "",         "");
-            tabelamaquina.Rows.Add("24", "",       "E,X,24",    "E,_,25",   "",         "");
-            tabelamaquina.Rows.Add("25", "",       "",          "E,_,25",   "D,A,26",   "");
-            tabelamaquina.Rows.Add("26", "",       "",          "D,X,27",   "",         "");
-            tabelamaquina.Rows.Add("27", "",       "E,_,28",    "D,_,27",   "",         "E,_,29");
-            tabelamaquina.Rows.Add("28", "",       "D,X,26",    "E,_,28",   "",         "");
-            tabelamaquina.Rows.Add("29", "",       "E,_,30",    "E,_,29",   "",         "");
-            tabelamaquina.Rows.Add("30", "D,>,31", "E,X,30",    "",         "E,_,30",   "");
-            tabelamaquina.Rows.Add("31", "",       "D,_,32",    "D,_,39",   "",         "");
-            tabelamaquina.Rows.Add("32", "",       "D,X,32",    "D,_,33",   "",         "");
-            tabelamaquina.Rows.Add("33", "",       "D,A,34",    "E,_,37",   "",         "");
-            tabelamaquina.Rows.Add("34", "",       "D,X,34",    "D,_,35",   "",         "");
-            tabelamaquina.Rows.Add("35", "",       "D,X,35",    "E,X,36",   "",         "");
-            tabelamaquina.Rows.Add("36", "",       "E,X,36",    "E,_,36",   "D,A,33",   "");
-            tabelamaquina.Rows.Add("37", "",       "",          "E,_,38",   "E,X,37",   "");
-            tabelamaquina.Rows.Add("38", "",       "E,X,38",    "D,_,31",    "",         "");
-            tabelamaquina.Rows.Add("39", "",       "D,_,39",    "0,0,0",    "",         "");
+            tabelamaquina.Rows.Add("0", "D,>,0", "D,X,0", "D,A,1", "", "");
+            tabelamaquina.Rows.Add("1", "", "D,B,2", "", "", "");
+            tabelamaquina.Rows.Add("2", "", "D,X,2", "D,A,3", "", "");
+            tabelamaquina.Rows.Add("3", "", "", "E,B,4", "", "");
+            tabelamaquina.Rows.Add("4", "", "E,X,4", "", "E,A,4", "D,B,5");
+            tabelamaquina.Rows.Add("5", "", "D,B,6", "", "E,A,8", "");
+            tabelamaquina.Rows.Add("6", "", "D,X,6", "", "D,A,7", "");
+            tabelamaquina.Rows.Add("7", "", "", "E,B,8", "", "D,B,7");
+            tabelamaquina.Rows.Add("8", "", "", "", "E,A,9", "E,B,8");
+            tabelamaquina.Rows.Add("9", "D,>,10", "E,X,9", "D,_,10", "", "D,B,5");
+            tabelamaquina.Rows.Add("10", "D,>,11", "E,X,10", "E,_,10", "D,_,10", "D,X,10");
+            tabelamaquina.Rows.Add("11", "", "D,X,11", "D,_,12", "D,_,10", "");
+            tabelamaquina.Rows.Add("12", "", "D,B,13", "D,_,20", "", "");
+            tabelamaquina.Rows.Add("13", "", "D,X,13", "D,_,14", "", "");
+            tabelamaquina.Rows.Add("14", "", "D,A,15", "E,_,18", "", "");
+            tabelamaquina.Rows.Add("15", "", "D,X,15", "D,_,16", "", "");
+            tabelamaquina.Rows.Add("16", "", "D,X,16", "E,X,17", "", "");
+            tabelamaquina.Rows.Add("17", "", "E,X,17", "E,_,17", "D,A,14", "");
+            tabelamaquina.Rows.Add("18", "", "", "E,_,19", "E,X,18", "");
+            tabelamaquina.Rows.Add("19", "", "E,X,19", "D,_,12", "", "D,B,12");
+            tabelamaquina.Rows.Add("20", "", "D,_,20", "E,_,20", "", "E,_,21");
+            tabelamaquina.Rows.Add("21", "", "", "D,A,22", "", "E,_,21");
+            tabelamaquina.Rows.Add("22", "", "D,X,23", "D,_,22", "", "");
+            tabelamaquina.Rows.Add("23", "", "D,X,23", "E,B,24", "", "");
+            tabelamaquina.Rows.Add("24", "", "E,X,24", "E,_,25", "", "");
+            tabelamaquina.Rows.Add("25", "", "", "E,_,25", "D,A,26", "");
+            tabelamaquina.Rows.Add("26", "", "", "D,X,27", "", "");
+            tabelamaquina.Rows.Add("27", "", "E,_,28", "D,_,27", "", "E,_,29");
+            tabelamaquina.Rows.Add("28", "", "D,X,26", "E,_,28", "", "");
+            tabelamaquina.Rows.Add("29", "", "E,_,30", "E,_,29", "", "");
+            tabelamaquina.Rows.Add("30", "D,>,31", "E,X,30", "", "E,_,30", "");
+            tabelamaquina.Rows.Add("31", "", "D,_,32", "D,_,39", "", "");
+            tabelamaquina.Rows.Add("32", "", "D,X,32", "D,_,33", "", "");
+            tabelamaquina.Rows.Add("33", "", "D,A,34", "E,_,37", "", "");
+            tabelamaquina.Rows.Add("34", "", "D,X,34", "D,_,35", "", "");
+            tabelamaquina.Rows.Add("35", "", "D,X,35", "E,X,36", "", "");
+            tabelamaquina.Rows.Add("36", "", "E,X,36", "E,_,36", "D,A,33", "");
+            tabelamaquina.Rows.Add("37", "", "", "E,_,38", "E,X,37", "");
+            tabelamaquina.Rows.Add("38", "", "E,X,38", "D,_,31", "", "");
+            tabelamaquina.Rows.Add("39", "", "D,_,39", "0,0,0", "", "");
         }
 
         #endregion
@@ -372,7 +376,7 @@ namespace MaquinaTurinAreaCubo
                 }
                 else
                 {
-                    DialogResult dr = MessageBox.Show("Linha Atual= " + linhaatual, "Proximo", MessageBoxButtons.OKCancel);
+                    DialogResult dr = MessageBox.Show("Estado Atual= " + linhaatual, "Proximo", MessageBoxButtons.OKCancel);
                     if (dr == DialogResult.Cancel)
                     {
                         return;
