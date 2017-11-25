@@ -115,6 +115,8 @@ namespace MaquinaTurinAreaCubo
                 return;
             }
 
+            lbData.Text = DateTime.Now.ToString();
+            lbData.Refresh();
             lbCalculando.Text = "Calculando...";
             lbCalculando.Refresh();
             RodarMaquina();
@@ -235,6 +237,8 @@ namespace MaquinaTurinAreaCubo
                 }
             }
 
+            lbDataFinal.Text = DateTime.Now.ToString();
+            lbDataFinal.Refresh();
             lbCalculando.Text = "Pronto";
             lbCalculando.Refresh();
             lbResposta.Text = contar.ToString();

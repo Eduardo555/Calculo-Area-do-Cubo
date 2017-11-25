@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbCalculando = new System.Windows.Forms.Label();
+            this.lbResposta = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtArea = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,8 +56,8 @@
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtfita = new System.Windows.Forms.RichTextBox();
-            this.lbResposta = new System.Windows.Forms.Label();
-            this.lbCalculando = new System.Windows.Forms.Label();
+            this.lbData = new System.Windows.Forms.Label();
+            this.lbDataFinal = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelamaquina)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -67,6 +69,8 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Controls.Add(this.lbDataFinal);
+            this.panel1.Controls.Add(this.lbData);
             this.panel1.Controls.Add(this.lbCalculando);
             this.panel1.Controls.Add(this.lbResposta);
             this.panel1.Controls.Add(this.button1);
@@ -80,6 +84,30 @@
             this.panel1.Size = new System.Drawing.Size(188, 711);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lbCalculando
+            // 
+            this.lbCalculando.AutoSize = true;
+            this.lbCalculando.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbCalculando.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCalculando.ForeColor = System.Drawing.Color.White;
+            this.lbCalculando.Location = new System.Drawing.Point(20, 656);
+            this.lbCalculando.Name = "lbCalculando";
+            this.lbCalculando.Size = new System.Drawing.Size(144, 25);
+            this.lbCalculando.TabIndex = 6;
+            this.lbCalculando.Text = "Calculando ...";
+            // 
+            // lbResposta
+            // 
+            this.lbResposta.AutoSize = true;
+            this.lbResposta.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbResposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbResposta.ForeColor = System.Drawing.Color.Red;
+            this.lbResposta.Location = new System.Drawing.Point(72, 290);
+            this.lbResposta.Name = "lbResposta";
+            this.lbResposta.Size = new System.Drawing.Size(20, 24);
+            this.lbResposta.TabIndex = 5;
+            this.lbResposta.Text = "0";
             // 
             // button1
             // 
@@ -306,29 +334,29 @@
             this.txtfita.TabIndex = 0;
             this.txtfita.Text = ">XXXXXX_?";
             // 
-            // lbResposta
+            // lbData
             // 
-            this.lbResposta.AutoSize = true;
-            this.lbResposta.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbResposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbResposta.ForeColor = System.Drawing.Color.Red;
-            this.lbResposta.Location = new System.Drawing.Point(72, 290);
-            this.lbResposta.Name = "lbResposta";
-            this.lbResposta.Size = new System.Drawing.Size(20, 24);
-            this.lbResposta.TabIndex = 5;
-            this.lbResposta.Text = "0";
+            this.lbData.AutoSize = true;
+            this.lbData.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbData.ForeColor = System.Drawing.Color.White;
+            this.lbData.Location = new System.Drawing.Point(22, 624);
+            this.lbData.Name = "lbData";
+            this.lbData.Size = new System.Drawing.Size(12, 16);
+            this.lbData.TabIndex = 7;
+            this.lbData.Text = "";
             // 
-            // lbCalculando
+            // lbDataFinal
             // 
-            this.lbCalculando.AutoSize = true;
-            this.lbCalculando.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbCalculando.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCalculando.ForeColor = System.Drawing.Color.White;
-            this.lbCalculando.Location = new System.Drawing.Point(20, 656);
-            this.lbCalculando.Name = "lbCalculando";
-            this.lbCalculando.Size = new System.Drawing.Size(144, 25);
-            this.lbCalculando.TabIndex = 6;
-            this.lbCalculando.Text = "Calculando ...";
+            this.lbDataFinal.AutoSize = true;
+            this.lbDataFinal.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDataFinal.ForeColor = System.Drawing.Color.White;
+            this.lbDataFinal.Location = new System.Drawing.Point(22, 640);
+            this.lbDataFinal.Name = "lbDataFinal";
+            this.lbDataFinal.Size = new System.Drawing.Size(12, 16);
+            this.lbDataFinal.TabIndex = 8;
+            this.lbDataFinal.Text = "";
             // 
             // frmTelaPrincipal
             // 
@@ -388,6 +416,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbResposta;
         private System.Windows.Forms.Label lbCalculando;
+        private System.Windows.Forms.Label lbData;
+        private System.Windows.Forms.Label lbDataFinal;
     }
 }
 
